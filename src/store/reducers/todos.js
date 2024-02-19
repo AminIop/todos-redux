@@ -1,6 +1,7 @@
 import { combineReducers } from "redux"
 import { TodosType } from "../constants/actions-types"
-import { clearList, removeTask } from "../../helpers"
+import { clearList, filterList, removeTask } from "../../helpers"
+import { todosData } from "../../data/model"
 
 const initialState = {
     todos: [
@@ -26,7 +27,7 @@ const todosReducer = (state = initialState, action) => {
         case TodosType.UPDATE_TASK:
             return state
         case TodosType.FILTER_LIST:
-            return state
+            return filterList(todosData, action.payload)
         case TodosType.REMOVE_LIST:
             return state
         case TodosType.CLEAR_LIST:
