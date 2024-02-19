@@ -1,28 +1,32 @@
 import { TodosType } from "../constants/actions-types/todos"
 
-export const addTask = newTask => ({
+export const addTaskTodosCreator = newTask => ({
     type: TodosType.ADD_TASK,
     payload: newTask
 })
 
-export const updateTask = id => ({
+export const updateTaskTodosCreator = id => ({
     type: TodosType.UPDATE_TASK,
     payload: id
 })
 
-export const removeTask = id => ({
+export const removeTaskTodosCreator = id => ({
     type: TodosType.REMOVE_TASK,
     payload: id
 })
 
-export const filterList = keyWord => ({
+export const filterListTodosCreator = keyWord => ({
     type: TodosType.FILTER_LIST,
     payload: keyWord
 })
 
-export const removeList = list => ({
+export const removeListTodosCreator = list => ({
     type: TodosType.REMOVE_LIST,
     payload: list
+})
+
+export const clearListTodosCreator = _ => ({
+    type: TodosType.CLEAR_LIST
 })
 
 

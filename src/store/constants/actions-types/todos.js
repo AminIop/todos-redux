@@ -3,5 +3,6 @@ export const TodosType = {
     REMOVE_TASK: 'todos.remove',
     UPDATE_TASK: 'todos.update',
     REMOVE_LIST: 'todos.removeList',
-    FILTER_LIST: 'todos.filter'
+    FILTER_LIST: 'todos.filter',
+    CLEAR_LIST: 'todos.clear'
 }
