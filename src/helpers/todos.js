@@ -20,3 +20,15 @@ export const filterList = (state, keyWord) => {
         todos: newTodoList
     }
 }
+
+export const addNewTask = (state, title) => {
+    const todo = {
+        id: state.todos.length + 1,
+        title,
+        isCompleted: false
+    }
+    return {
+        ...state,
+        todos: [...state.todos, todo]
+    }
+}
