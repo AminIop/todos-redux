@@ -1,0 +1,1 @@
+export {clearList} from "./todos"
